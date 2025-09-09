@@ -9,6 +9,7 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  base: "/",
   resolve: {
     alias: {
       "@": "/src",
