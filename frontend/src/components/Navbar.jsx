@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // hamburger & close icons
-
+import logo from "../assets/image.png";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,7 +15,10 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-gray-800">IronMart</h1>
+        <div className="text-2xl flex gap-2 justify-center items-center  font-bold text-gray-800">
+          <img className="w-16" src={logo} alt="Logo" />
+          <h1>Shiv Enterprise</h1>
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
@@ -27,6 +30,9 @@ export default function Navbar() {
             className="hover:text-blue-600 cursor-pointer"
           >
             Top Selling
+          </Link>
+          <Link to="/about" className="hover:text-blue-600 cursor-pointer">
+            About
           </Link>
           <Link to="/contact" className="hover:text-blue-600 cursor-pointer">
             Contact
@@ -63,6 +69,13 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
           >
             Top Selling
+          </Link>
+          <Link
+            to="/about"
+            className="block text-gray-700 font-medium hover:text-blue-600"
+            onClick={() => setIsOpen(false)}
+          >
+            About
           </Link>
           <Link
             to="/contact"

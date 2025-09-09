@@ -1,55 +1,11 @@
 import { useState } from "react";
-
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ProductCard from "./ProductCard";
+import angle from "../assets/angle.png";
+import productsData from "../MasterData/TopSellingProduct";
 
-// 🛒 Sample Products Data
-const productsData = [
-  {
-    id: 1,
-    name: "Industrial Iron Rod",
-    price: 2500,
-    category: "Rods",
-    img: "/iron1.jpg",
-  },
-  {
-    id: 2,
-    name: "Iron Sheets",
-    price: 4000,
-    category: "Sheets",
-    img: "/iron2.jpg",
-  },
-  {
-    id: 3,
-    name: "Construction Iron Bar",
-    price: 1800,
-    category: "Bars",
-    img: "/iron3.jpg",
-  },
-  {
-    id: 4,
-    name: "Steel Coated Iron Plate",
-    price: 5500,
-    category: "Plates",
-    img: "/iron4.jpg",
-  },
-  {
-    id: 5,
-    name: "Iron Mesh",
-    price: 3000,
-    category: "Mesh",
-    img: "/iron5.jpg",
-  },
-  {
-    id: 6,
-    name: "Heavy Duty Iron Beam",
-    price: 7200,
-    category: "Beams",
-    img: "/iron6.jpg",
-  },
-];
 
 export default function TopSelling() {
   const [sortBy, setSortBy] = useState("default");
@@ -88,10 +44,11 @@ export default function TopSelling() {
           transition={{ duration: 0.6 }}
           className="text-4xl font-extrabold text-gray-800"
         >
-          Our Top Selling Iron Products
+          Our Top Selling Iron & Steel Products
         </motion.h1>
         <p className="mt-4 text-gray-600">
-          Choose from our best range of iron products trusted by industries
+          Explore our wide range of high-quality iron and steel products trusted
+          by industries.
         </p>
       </div>
 
@@ -104,12 +61,13 @@ export default function TopSelling() {
           className="px-4 py-2 border rounded-lg shadow-sm focus:ring focus:ring-blue-300"
         >
           <option value="all">All Categories</option>
-          <option value="Rods">Rods</option>
+          <option value="Angles">MS Angles</option>
+          <option value="Channels">MS Channels</option>
+          <option value="Joists">MS Joists</option>
           <option value="Sheets">Sheets</option>
-          <option value="Bars">Bars</option>
           <option value="Plates">Plates</option>
-          <option value="Mesh">Mesh</option>
-          <option value="Beams">Beams</option>
+          <option value="TMT">TMT</option>
+          <option value="Pipes">Pipes</option>
         </select>
 
         {/* Sorting */}

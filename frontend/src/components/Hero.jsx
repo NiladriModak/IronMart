@@ -15,12 +15,11 @@ export default function Hero() {
         className="flex-1 text-center md:text-left"
       >
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
-          Premium Quality <span className="text-blue-600">Iron</span> for Every
-          Need
+          Everywhere You See <span className="text-blue-600">Iron</span>,Think
+          Of Shiv Dev Enterprise
         </h2>
         <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-lg mx-auto md:mx-0">
-          Durable, reliable, and affordable iron products trusted by industries
-          worldwide.
+          Premium Quality for Every Need
         </p>
         <button
           onClick={() => navigator("/top-selling-product")}
