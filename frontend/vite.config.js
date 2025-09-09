@@ -9,7 +9,7 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: "/",
+  base: "/", // IMPORTANT for Vercel
   resolve: {
     alias: {
       "@": "/src",
@@ -17,7 +17,7 @@ export default defineConfig({
   },
   server: {
     watch: {
-      usePolling: true ,
+      usePolling: true,
     },
   },
 });
